@@ -4,11 +4,29 @@ function menu() {
 
   do {
     opt = parseInt(prompt("1) Ingresar tarea\n2) Modificar tarea\n3) Visualizar tarea\n4) Eliminar tarea\n5) Salir"));
+
+    switch (opt) {
+      case 1:
+        console.log(opt);
+        break;
+      case 2:
+        console.log(opt);
+        break;
+      case 3:
+        console.log(opt);
+        break;
+      case 4:
+        console.log(opt);
+        break;
+      case 5:
+        alert("Muchas gracias por usar ToDo Dev");
+        break;
+      default:
+        alert("Debes ingresar una opcion valida!");
+        break;
+    } 
   
   } while(opt != 5);
-  alert("Muchas gracias por usar ToDo Dev");
-
-
 }
 
 /**
@@ -49,6 +67,7 @@ function main() {
   alert("Bienvenido a ToDo Dev");
   const totalTaks = getQuantityTask();
   alert("Ingresarás una cantidad de tareas totales a :\n" + totalTaks);
+
   menu();
 }
 
