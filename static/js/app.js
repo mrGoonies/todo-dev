@@ -50,6 +50,7 @@ class User {
       if (task.id === idTask) {
         console.log(task)
         alert(`=== Tarea ${task.id} ===\nNombre: ${task.name}\nDescripcion: ${task.description}`);
+        break;
       } else {
         alert(`Lo siento, no posees ninguna tarea almacenada con un ID igual a ${idTask}`);
       }
@@ -58,6 +59,7 @@ class User {
 
   deleteTaskById(idTask) {
     const arrOfTask = this.task;
+    idTask -= 1;
 
     if (arrOfTask.length === 0) {
       alert("Usted no posee tareas almacenadas.");
@@ -68,6 +70,12 @@ class User {
       alert("Haz excedido el rango de la cantidad de tareas");
       return ;
     }
+
+    console.log(`Se eliminara el siguiente elemento ${this.task[idTask]}`);
+    this.task.splice(idTask, 1);
+
+    console.log(`Elemento con el indice ${idTask} a sido eliminado!`);
+    console.log(this.task);
   }
 }
 
@@ -123,6 +131,9 @@ function main() {
         break;
 
       case 4:
+        let idTaskForDelete = parseInt(prompt("Ingrese el ID de la tarea el cualquiere eliminar"))
+        firstObj.deleteTaskById(idTaskForDelete);
+        alert("Se a eliminado tu tarea!");
 
         break;
       case 5:
