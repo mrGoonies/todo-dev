@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
 html,
 body,
 div,
@@ -92,7 +91,7 @@ video {
 
 }
 
-/* HTML5 display-role reset for older browsers */
+/* HTML6 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -213,6 +212,104 @@ main {
       }
     }
   }
+}
+
+.home {
+  background-color: #fca311;
+
+  h1 {
+    font-size: 2.5rem;
+    color: #14213d;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 2rem;
+  }
+
+  .entry-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    
+
+    h2 {
+      font-size: 2rem;
+      color: #14213d;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .entry-task__add-task {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      input {
+        padding: 0.5rem;
+        border: 1px solid #14213d;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      button {
+        padding: 0.5rem;
+        border: 1px solid #14213d;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        color: #14213d;
+        font-weight: bold;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: #14213d;
+          color: #fca311;
+        }
+      }
+    }
+  }
+
+  .all-task-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    background-color: #2e4370;
+    color: #ffb845;
+
+      h2 {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        color: #fca311;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .task-list__board {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .task-list__task {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 1rem;
+          padding: 1rem;
+          border: 1px solid #fca311;
+          border-radius: 0.5rem;
+          background-color: #14213d;
+          color: #fca311;
+
+        }
+      }
+    }
 }
 
 footer {
