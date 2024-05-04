@@ -13,7 +13,7 @@ class User {
   }
 
   get allTask() {
-    const tasks = this.task;
+    let tasks = this.task;
 
     if (tasks.length === 0) {
       alert("Usted no posee tareas almacenadas");
@@ -40,11 +40,6 @@ class User {
   findTaskById(idTask) {
     const arrOfTask = this.task;
 
-    if (arrOfTask.length === 0) {
-      alert("Usted no posee tareas almacenadas.");
-      return;
-    }
-
     const filteredTask = arrOfTask.filter((task) => task.id === idTask);
 
     if (filteredTask) {
@@ -54,7 +49,7 @@ class User {
         );
       }
       return;
-    }
+    } 
 
     alert("Tu tarea no se a encontrado en nuestro To Do");
   }
@@ -125,11 +120,18 @@ function main() {
         break;
 
       case 3:
-        let idForTask = parseInt(prompt("Ingresa el ID de tu tarea"));
+        const arrOfTask = firstObj.task;
+        
+        if (arrOfTask.length === 0) {
+          alert("Usted no posee tareas almacenadas");
+          break;
 
-        firstObj.findTaskById(idForTask);
+        } else {
+          let idForTask = parseInt(prompt("Ingresa el ID de tu tarea"));
 
-        break;
+          firstObj.findTaskById(idForTask);
+          break;
+        }
 
       case 4:
         let idTaskForDelete = parseInt(
