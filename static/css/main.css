@@ -274,40 +274,37 @@ main {
   }
 
   .all-task-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     margin-top: 2rem;
     background-color: #2e4370;
     color: #ffb845;
 
       h2 {
-        margin-top: 2rem;
+        text-align: center;
         font-size: 1.5rem;
         color: #fca311;
-        margin-bottom: 1rem;
+        padding: 2rem;
         font-weight: 600;
       }
 
-      .task-list__board {
+      .all-task-list__pending {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        margin-bottom: 2rem;
 
-        .task-list__task {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin: 1rem;
-          padding: 1rem;
+        #pending-tasks {
           border: 1px solid #fca311;
           border-radius: 0.5rem;
+          padding: 1rem;
+          width: 100%;
+          max-width: 500px;
           background-color: #14213d;
           color: #fca311;
-
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
         }
+
       }
     }
 }
